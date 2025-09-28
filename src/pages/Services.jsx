@@ -39,20 +39,21 @@ const Services = () => {
       image: service3Image // Use the imported variable
     },
     { 
+      title: "Carpet removal and Floor installation", 
+      description: "Seamless carpet removal and professional floor installation services that refresh and transform interior spaces.", 
+      image: service4Image // Use the imported variable
+    },
+    { 
       title: "Tenant Improvements", 
       description: "From office buildouts to reconfigurations, ADA updates, and finish upgrades — we tailor spaces for style and efficiency.", 
-      image: service4Image // Use the imported variable
+      image: service5Image // Use the imported variable
     },
     { 
       title: "Restaurant & Retail", 
       description: "Light remodels, custom millwork, BOH improvements, and dining area refreshes to elevate both function and guest experience.", 
-      image: service5Image // Use the imported variable
-    },
-    { 
-      title: "Maintenance Contracts", 
-      description: "Ongoing repairs, punch list completion, and seasonal upkeep services that keep properties in top condition.", 
       image: service6Image // Use the imported variable
     },
+  
   ];
 
   const projects = [
