@@ -30,13 +30,12 @@ const services = [
       "Expand your living space with custom-built decks, patios, and outdoor living Solution.",
     alt: "Decks and Outdoor",
   },
-  {
-    title: "Tenant Improvements",
-    image: service4,
-    description:
-      "We provide complete tenant improvement services to optimize your commercial or residential property.",
-    alt: "Tenant Improvements",
-  },
+  { 
+        title: "Carpet removal and Floor installation", 
+        image: service4, // Use the imported variable
+        description: "Seamless carpet removal and professional floor installation services that refresh and transform interior spaces.", 
+        alt: "Carpet removal and Floor installation",
+      },
 ];
 
 const ServicesSection = () => {
