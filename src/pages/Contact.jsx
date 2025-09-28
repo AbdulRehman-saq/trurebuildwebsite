@@ -17,10 +17,10 @@ const Contact = () => {
     };
 
     EmailJS.send(
-      "service_xgbbn1q", //service
-      "template_3shyx0q", //template
+      "service_58vqkwr", //service
+      "template_pk29jt7", //template
       templateParams,
-      "gCbCAZcFUYsrz3W0Y" //public key
+      "n3EL4RrgrG7A3JP0Z" //public key
     )
     .then(
       () => {
