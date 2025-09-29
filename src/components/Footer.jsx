@@ -99,9 +99,10 @@ const Footer = ({ onNavClick }) => {
                 <li>
                 <button
                   onClick={() => handleClick("services")}
-                  className="hover:text-[#163c6e] transition-colors duration-300"
+                  className="hover:text-[#163c6e] text-left whitespace-normal transition-colors duration-300"
                 >
-                  Carpet removal and Floor installation
+                  Carpet removal and
+                  Floor installation
                 </button>
               </li>
               <li>

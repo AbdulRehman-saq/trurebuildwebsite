@@ -77,32 +77,51 @@ const Services = () => {
   
   const sliderSettings = { dots: true, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, swipeToSlide: true, arrows: false };
 
- const renderServiceCard = (item) => (
-  <div
-    key={item.title}
-    className="group relative rounded-2xl shadow-lg overflow-hidden cursor-pointer flex flex-col md:block
-               transform transition duration-500
-               md:hover:-translate-y-2" // hover translate only on md+
-  >
-    <img
-      src={item.image}
-      alt={item.title}
-      className="w-full h-64 object-cover transition-transform duration-700
-                 md:group-hover:scale-110" // zoom only on md+
-    />
-    <div className="md:hidden p-4 bg-white text-gray-800">
-      <h3 className="text-lg font-semibold">{item.title}</h3>
-      <p className="text-sm mt-2">{item.description}</p>
-    </div>
-    <div className="hidden md:flex absolute inset-0 flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-10">
-      <h3 className="text-lg font-semibold">{item.title}</h3>
-      <p className="text-sm mt-1">{item.description}</p>
-    </div>
-    <div className="hidden md:flex absolute inset-0  items-center justify-center bg-black/40 text-white text-2xl font-bold transition-opacity duration-500 group-hover:opacity-0 z-20">
-      {item.title}
-    </div>
+ const renderServiceCard = (item) => {
+  // Check if it's the carpet service
+  const isCarpetService = item.title.includes("Carpet removal");
+
+  return (
+    <div
+  key={item.title}
+  className="group relative rounded-2xl shadow-lg overflow-hidden cursor-pointer
+             flex flex-col items-center text-center md:block
+             transform transition duration-500
+             md:hover:-translate-y-2"
+>
+  <img
+    src={item.image}
+    alt={item.title}
+    className="w-full h-64 object-cover transition-transform duration-700
+               md:group-hover:scale-110"
+  />
+
+  {/* Mobile content */}
+  <div className="md:hidden p-4 bg-white text-gray-800 text-center">
+    <h3 className="text-lg font-semibold">{item.title}</h3>
+    <p className="text-sm mt-2">{item.description}</p>
   </div>
-);
+
+  {/* Desktop hover content */}
+  <div className="hidden md:flex absolute inset-0 flex-col justify-end p-6
+                  bg-gradient-to-t from-black/80 via-black/40 to-transparent
+                  text-white opacity-0 transition-opacity duration-500
+                  group-hover:opacity-100 z-10 text-center items-center">
+    <h3 className="text-lg font-semibold">{item.title}</h3>
+    <p className="text-sm mt-1">{item.description}</p>
+  </div>
+
+  {/* Overlay title */}
+  <div className="hidden md:flex absolute inset-0 items-center justify-center
+                  bg-black/40 text-white text-2xl font-bold transition-opacity
+                  duration-500 group-hover:opacity-0 z-20 text-center">
+    {item.title}
+  </div>
+</div>
+
+  );
+};
+
 
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
@@ -111,9 +130,10 @@ const Services = () => {
         {/* Services */}
         <h2 className="text-4xl sm:text-6xl font-bold text-center text-gray-800 mb-4">Our Services</h2>
         <p className="text-center font-medium text-gray-600 mb-12 max-w-2xl mx-auto px-4 sm:px-0">We offer a wide range of services to meet all your construction needs, from initial planning to final touches.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 px-5 pl-8 lg:grid-cols-3 gap-10">
-          {services.map((service) => renderServiceCard(service))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+  {services.map((service) => renderServiceCard(service))}
+</div>
+
 
       {/* Full-width banner with overlay text */}
 <div className="relative w-full my-36">
