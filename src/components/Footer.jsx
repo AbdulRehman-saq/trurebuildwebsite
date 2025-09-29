@@ -96,6 +96,14 @@ const Footer = ({ onNavClick }) => {
                   Decks & Outdoor
                 </button>
               </li>
+                <li>
+                <button
+                  onClick={() => handleClick("services")}
+                  className="hover:text-[#163c6e] transition-colors duration-300"
+                >
+                  Carpet removal and Floor installation
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => handleClick("services")}
@@ -110,14 +118,6 @@ const Footer = ({ onNavClick }) => {
                   className="hover:text-[#163c6e] transition-colors duration-300"
                 >
                   Restaurant & Retail
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleClick("services")}
-                  className="hover:text-[#163c6e] transition-colors duration-300"
-                >
-                  Maintenance Contracts
                 </button>
               </li>
             </ul>
